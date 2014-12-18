@@ -1,0 +1,205 @@
+name: "LeNet"
+layers {
+name: "data"
+type: HDF5_DATA
+top: "data"
+top: "label"
+	hdf5_data_param {
+		source: "higgs_data_list.txt"
+		batch_size: 100
+	}
+}
+layers {
+  name: "ip1"
+  type: INNER_PRODUCT
+  bottom: "data"
+  top: "ip1"
+  inner_product_param {
+    num_output: 274
+    weight_filler {
+      type: "gaussian"
+			std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layers {
+  name: "relu1"
+  type: RELU
+  bottom: "ip1"
+  top: "ip1"
+}
+layers {
+  name: "ip2"
+  type: INNER_PRODUCT
+  bottom: "ip1"
+  top: "ip2"
+  inner_product_param {
+    num_output: 274
+    weight_filler {
+      type: "gaussian"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layers {
+  name: "relu1"
+  type: RELU
+  bottom: "ip2"
+  top: "ip2"
+}
+layers {
+  name: "ip3"
+  type: INNER_PRODUCT
+  bottom: "ip2"
+  top: "ip3"
+  inner_product_param {
+    num_output: 274
+    weight_filler {
+      type: "gaussian"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layers {
+  name: "relu1"
+  type: RELU
+  bottom: "ip3"
+  top: "ip3"
+}
+layers {
+  name: "ip4"
+  type: INNER_PRODUCT
+  bottom: "ip3"
+  top: "ip4"
+  inner_product_param {
+    num_output: 274
+    weight_filler {
+      type: "gaussian"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layers {
+  name: "relu1"
+  type: RELU
+  bottom: "ip4"
+  top: "ip4"
+}
+layers {
+  name: "ip5"
+  type: INNER_PRODUCT
+  bottom: "ip4"
+  top: "ip5"
+  inner_product_param {
+    num_output: 274
+    weight_filler {
+      type: "gaussian"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layers {
+  name: "relu1"
+  type: RELU
+  bottom: "ip5"
+  top: "ip5"
+}
+layers {
+  name: "ip6"
+  type: INNER_PRODUCT
+  bottom: "ip5"
+  top: "ip6"
+  inner_product_param {
+    num_output: 274
+    weight_filler {
+      type: "gaussian"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layers {
+  name: "relu1"
+  type: RELU
+  bottom: "ip6"
+  top: "ip6"
+}
+layers {
+  name: "drop6"
+  type: DROPOUT
+  bottom: "ip6"
+  top: "ip6"
+  dropout_param {
+    dropout_ratio: 0.25
+  }
+}
+layers {
+  name: "ip7"
+  type: INNER_PRODUCT
+  bottom: "ip6"
+  top: "ip7"
+  inner_product_param {
+    num_output: 274
+    weight_filler {
+      type: "gaussian"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layers {
+  name: "relu1"
+  type: RELU
+  bottom: "ip7"
+  top: "ip7"
+}
+layers {
+  name: "drop7"
+  type: DROPOUT
+  bottom: "ip7"
+  top: "ip7"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+layers {
+  name: "ip8"
+  type: INNER_PRODUCT
+  bottom: "ip7"
+  top: "ip8"
+  inner_product_param {
+    num_output: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.001
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layers {
+  name: "loss"
+  type: SIGMOID_CROSS_ENTROPY_LOSS
+  bottom: "ip8"
+  bottom: "label"
+}

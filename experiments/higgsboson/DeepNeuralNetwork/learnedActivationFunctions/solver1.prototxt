@@ -1,0 +1,34 @@
+# The training protocol buffer definition
+train_net: "7Full/learned/train1.prototxt"
+# The testing protocol buffer definition
+test_net: "7Full/learned/test1.prototxt"
+#test size of 10 million and batchsize of 100
+test_iter: 100000
+
+test_interval: 3500000
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.006
+momentum: 0.5
+weight_decay: 0.001	
+
+device_id: 2
+
+binary: true
+
+# The learning rate policy
+#lr_policy: "inv"
+#gamma: 0.0001
+#power: 0.75
+
+lr_policy: "exp"
+gamma: 0.9999999606
+
+# Display every 100 iterations
+display: 100000
+# The maximum number of iterations. 65 epochs
+max_iter: 45500000
+# snapshot intermediate results
+snapshot: 700000
+snapshot_prefix: "7Full/learned/solverstate/dummy1"
+# solver mode: CPU or GPU
+solver_mode: GPU
