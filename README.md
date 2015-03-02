@@ -23,7 +23,7 @@ layers {
      	std: 0.2
     }
     # Initialize the offset parameters "b." Each "b" is drawn from a gaussian distribution with standard deviation 0.5
-		weight_filler2 {
+    weight_filler2 {
       type: "gaussian"
       std: 0.5
     }
