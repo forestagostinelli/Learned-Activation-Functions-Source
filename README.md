@@ -18,7 +18,7 @@ In place computation can be done. However, due to implementation details, it doe
 ==========================================
 Solver Files
 ==========================================
-We made custom changes to the solver files. The changes are reflected in src/caffe/solver.cpp and include/caffe.solver.hpp
+We made custom changes to the solver files. The changes are reflected in src/caffe/solver.cpp, include/caffe.solver.hpp, and src/caffe/proto/caffe.proto
 
 ==========================================
 Defining the Learned Activation Functions
