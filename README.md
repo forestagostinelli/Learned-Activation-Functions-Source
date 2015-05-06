@@ -3,6 +3,8 @@ INTRODUCTION
 ==========================================
 This repository if for the reproduction of research by Agostinelli et al. Learning Activation Functions to Improve Deep Neural Networks. http://arxiv.org/abs/1412.6830
 
+This is a learnable activation function for neural networks. Experiments have shown that it outperforms rectified linear units (ReLU) and Leaky ReLU.
+
 ==========================================
 Memory
 ==========================================
