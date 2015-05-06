@@ -18,6 +18,7 @@ In place computation can be done. However, due to implementation details, it doe
 ==========================================
 DEFINING THE LEARNED ACTIVATION FUNCTIONS
 ==========================================
+```
 layers {<br />
   name: "learned1"<br />
   type: LEARNED_NEURON<br />
@@ -38,4 +39,5 @@ layers {<br />
       		
     	}<br />
   }<br />
-}<br />
+}
+```
