@@ -19,25 +19,24 @@ In place computation can be done. However, due to implementation details, it doe
 DEFINING THE LEARNED ACTIVATION FUNCTIONS
 ==========================================
 ```
-layers {<br />
-  name: "learned1"<br />
-  type: LEARNED_NEURON<br />
-  bottom: "conv1"<br />
-  top: "conv1"<br />
-  learned_neuron_param {<br />
-	sums: 5 # the value of S<br />
+layers {
+  name: "learned1"
+  type: LEARNED_NEURON
+  bottom: "conv1"
+  top: "conv1"
+  learned_neuron_param {
+	sums: 5 # the value of S
 	# Initialize the "a" parameters. Each "a" is drawn from a uniform distribution between -0.2 and 0.2.<br />
-	# the std increases as S decreases<br />
-    	weight_filler1 {<br />
-		type: "dense_uniform"<br />
-     		std: 0.2<br />
-    	}<br />
-    	# Initialize the offset parameters "b." Each "b" is drawn from a gaussian distribution with standard deviation 0.5<br />
-    	weight_filler2 {<br />
-      		type: "gaussian"<br />
-      		std: 0.5<br />
-      		
-    	}<br />
-  }<br />
+	# the std increases as S decreases
+    	weight_filler1 {
+		type: "dense_uniform"
+     		std: 0.2
+    	}
+    	# Initialize the offset parameters "b." Each "b" is drawn from a gaussian distribution with standard deviation 0.5
+    	weight_filler2 {
+      		type: "gaussian"
+      		std: 0.5
+    	}
+  }
 }
 ```
