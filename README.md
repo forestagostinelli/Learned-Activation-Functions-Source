@@ -16,6 +16,11 @@ In place computation
 In place computation can be done. However, due to implementation details, it does not conserve memory and tests show it will result in a slight decrease in speed.
 
 ==========================================
+Solver Files
+==========================================
+We made custom changes to the solver files. The changes are reflected in src/caffe/solver.cpp and include/caffe.solver.hpp
+
+==========================================
 Defining the Learned Activation Functions
 ==========================================
 ```
