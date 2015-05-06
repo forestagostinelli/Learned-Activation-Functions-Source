@@ -1,7 +1,17 @@
 ==========================================
 INTRODUCTION
 ==========================================
-These files are to help with the reproduction of research by Agostinelli et al. Learning Activation Functions to Improve Deep Neural Networks. http://arxiv.org/abs/1412.6830
+This repository if for the reproduction of research by Agostinelli et al. Learning Activation Functions to Improve Deep Neural Networks. http://arxiv.org/abs/1412.6830
+
+==========================================
+Memory
+==========================================
+The use of this layer will require more memory. There is a "save_mem" option that can be used. However, this will lead to slower performance and has not yet been thoroughly tested.
+
+==========================================
+In place computation
+==========================================
+In place computation can be done. However, due to implementation details, it does not conserve memory and tests show it will result in a slight decrease in speed.
 
 ==========================================
 DEFINING THE LEARNED ACTIVATION FUNCTIONS
@@ -14,7 +24,7 @@ layers {
   
   bottom: "conv1"
   
-  top: "conv1_l"
+  top: "conv1"
   
   blobs_lr: 1 
   
