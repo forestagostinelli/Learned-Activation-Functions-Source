@@ -1,3 +1,4 @@
+The layer files will be coming soon. They are being tested to make sure they work in the new version of Caffe.
 ==========================================
 Introduction
 ==========================================
@@ -19,17 +20,6 @@ In place computation can be done. However, due to implementation details, it doe
 Solver Files
 ==========================================
 We made custom changes to the solver files. The changes are reflected in src/caffe/solver.cpp, include/caffe.solver.hpp, and src/caffe/proto/caffe.proto
-
-==========================================
-Known Bugs
-==========================================
-When a dropout layer comes immediately after an APL layer do not use in-place blobs for either the APL layer or the dropout layer.
-
-For example, if the blob coming into apl is "conv1"
-then for APL layer bottom is "conv1" and top is "conv1_a"
-For dropout bottom is "conv1_l" and top is "conv1_d"
-
-This is only seen in the new version of Caffe and the cause is not yet known.
 
 ==========================================
 Defining the Learned Activation Functions
