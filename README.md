@@ -1,4 +1,3 @@
-The layer files will be coming soon. They are being tested to make sure they work in the new version of Caffe.
 ==========================================
 Introduction
 ==========================================
