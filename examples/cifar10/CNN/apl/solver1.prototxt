@@ -1,0 +1,28 @@
+net: "CNN/apl/train_test4.prototxt"
+test_iter: 100
+test_interval: 1000
+
+base_lr: 0.01
+momentum: 0.5
+max_momentum: 0.9
+momentum_change_steps: 10000
+weight_decay: 0.001
+
+device_id: 3
+
+
+lr_policy: "preset"
+lr: 0.01
+lr_change: 60000
+lr: 0.001
+lr_change: 80000
+lr: 0.0001
+lr_change: 85000
+lr: 0.00001
+lr_change: 90000
+
+display: 200
+max_iter: 90000
+snapshot: 0
+snapshot_prefix: "CNN/apl/models/apl_1"
+solver_mode: GPU
